@@ -75,6 +75,7 @@ header{
     height: 800px;
     width: 100%;
     font-family: 'Nanum Myeongjo', serif;
+    font-weight: bold;
 }
 
 nav{
@@ -91,6 +92,7 @@ header img{
 
 
 #big{
+
     position: absolute;
     font-size: 50px;
     color:#fff;
@@ -238,4 +240,45 @@ translate: all 0.3s;
       margin-top: 120px;
       margin-left: 950px;
       box-shadow: 2px 2px 25px black;
+  }
+  
+  #info{
+      color:#fff;
+        font-family: 'Nanum Gothic', sans-serif;
+    
+  }
+
+  #title{
+    font-family: 'Nanum Myeongjo', serif;
+    z-index: 1;
+      position: absolute;
+      font-size: 50px;
+      margin-top: 8%;
+      line-height: 60pt;
+      margin-left: 3%;
+  }
+
+  #info_1{
+    position: absolute;
+    font-size: 10pt;
+    margin-top: 25%;
+    line-height: 20pt;
+    margin-left: 3%;
+  }
+  #box_1{
+      position: absolute;
+      width: 45%;
+      height: 3px;
+      margin-top: 10%;
+      margin-left: 25%;
+      background: linear-gradient(312deg, rgba(129,17,19,1) 0%, rgba(39,61,85,1) 100%);
+  }
+
+  #colorBox{
+      background-color: #758490;
+      width: 10%;
+      height:35px;
+      position: absolute;
+      margin-top: 15%;
+      margin-left: 3%;
   }
