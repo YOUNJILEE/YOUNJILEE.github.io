@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+    #main{
+       height: 730px;
+        width: 100%;
+      background: url('img/main_bg.jpg')  no-repeat center center fixed;
+    
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto');
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:800px;margin:0 auto;margin-top:50px; display: inline-block}
+    .tab-menu ul{display:flex;margin: auto; width: 500px}
+    .tab-menu li{flex:1;height:20px; width: 500px}
+    .tab-menu li a{position:relative;display:block;height:4px;background-color:red;text-transform:uppercase;text-align:center;color:#fff;line-height:30px;}
+    .tab-menu li a.selected{background-color:#000;cursor:default; height:5px;}
+    .tab-container{width:85%;margin:0 auto;border:1px solid #000;box-sizing:border-box}
+    .tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
+    .tab-container .tab-content.selected{display:block} 
+
+</style>
+    </head>
+    <body>
+        <section id="main">
+                <div id="tab-menu" class="tab-menu">
+                        <ul>
+                          <li><a href="#" class="selected">seen1    </a></li>
+                          <li><a href="#">seen1</a></li>
+                          <li><a href="#"></a></li>
+                          <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-container">
+                      <div class="tab-content selected">Tab 1 Content.</div>
+                      <div class="tab-content">Tab 2 Content.</div>
+                      <div class="tab-content">Tab 3 Content.</div>
+                      <div class="tab-content">Tab 4 Content.</div>
+                    </div>
+                  
+        </section>
+        <script type="text/javascript">
+            var $tabMenu = document.querySelector("#tab-menu");
+            var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
+            var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
+            // console.log($tabMenu, $tabMenuEl);
+            // console.log($tabContent);
+            for(var i = 0; i < $tabMenuEl.length; i++){
+              tabMenuClick(i);
+            }
+            function tabMenuClick(index){
+              //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
+              $tabMenuEl[index].addEventListener('click', function(e) {
+                e.preventDefault();
+                for(var i = 0; i < $tabMenuEl.length; i++){
+                  //모든 요소에서 .selected 를 삭제.
+                  $tabMenuEl[i].classList.remove('selected');
+                  $tabContent[i].classList.remove('selected');
+                  if(i === index){
+                    //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
+                    //같은 경우에 .selected 를 요소에 추가.
+                    $tabMenuEl[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+                  }
+                }
+                // for(var i = 0; i < $tabContent.length; i++){
+                //   $tabContent[i].classList.remove('selected');
+                //   if(i === index){
+                //     $tabContent[i].classList.add('selected');
+                //   }
+                // }
+              });
+            }
+          </script>
+        
+</body>
+</html>

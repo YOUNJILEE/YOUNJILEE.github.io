@@ -3,23 +3,15 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="section.css" media="all">
         <style>
-        * {
-            box-sizing:border-box;
-            margin:0;
-            padding:0;
-        }
-        ul {
-            list-style-type:none;
-        }
-        body {
-            font-family:"맑은 고딕", "돋움";
-            font-size:100%;
-        }
+
         [class*="c_"] {
             float:left;
-            padding:10px;
+        
         }
         [class*="c_"] {
             width:100%;
@@ -53,35 +45,8 @@
             .c_11 {width:91.66%;}
             .c_12 {width:100%;}
         }
-        header {
-            height:80px;
-            padding:20px;
-            background-color:#66c0e7;
-        }
-        aside#menu {
-            color:#ffffff;
-        }
-        aside#menu li {
-            padding:10px;
-            margin:5px 0 0 0;
-            background-color:#b52d89;
-        }
-        section#main {
-            padding:15px;
-        }
-        section#main p {
-            padding:5px;
-            font-size:0.95em;
-            line-height:130%;
-        }
 
-        
-        aside#photos img {
-            width:100%;
-        }
-        aside#photos li {
-            margin:5px 0 0 0;
-        }        
+      
         footer {
             height:60px;
             padding:10px;
@@ -89,37 +54,627 @@
             text-align:center;
             background-color:#eeeeee;
         }
+
+
+
+.accordion {
+
+  height: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 200px 120px;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("img/01.jpg");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("img/08.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("img/09.jpg");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("img/02.jpg");
+}
+
+.accordion ul li:nth-child(5) {
+  background-image: url("img/07.jpg");
+}
+
+
+
+.accordion ul:hover li, .accordion ul:focus-within li {
+  width: 20%;
+}
+.accordion ul li:focus {
+  outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus, .accordion ul:focus-within li:focus {
+  width: 100%;
+}
+.accordion ul:hover li:hover a,
+.accordion ul li:focus a, .accordion ul:focus-within li:focus a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *,
+.accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.accordion ul:hover li {
+  width: 8% !important;
+}
+.accordion ul:hover li a * {
+  opacity: 0 !important;
+}
+.accordion ul:hover li:hover {
+  width: 60% !important;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+
+  }
+
+
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.about {
+  text-align: center;
+
+  font-size: 12px;
+  color: #666;
+}
+
+ p{
+    padding-top:30px;}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+
+/* 이거는 메뉴 css */
+
+header{
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+}
+
+
+header img{
+    margin-left: 10px;
+}
+
+html,
+  body {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  #logo{
+
+float: right;
+margin-right: 20px;
+
+  }
+
+
+  .open,
+  .close {
+    display: inline-block;
+    padding: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .overlay {
+    position: fixed;
+    width: 0;
+    top: 0;
+    background-color: #333;
+    opacity: 0.7;
+    overflow-x: hidden;
+    height: 100%;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 200px;
+    margin-top: 30px;
+  }
+  
+  .overlay-content a {
+    font-size: 2rem;
+    color: #fff;
+    display: block;
+    padding: 35px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+  }
+  .overlay-content a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+    display: block;
+  }
+  .overlay-content a:hover {
+    color: #ff9f1a;
+  }
+  
+  .overlay-content a:hover:after {
+    width: 25%;
+  }
+  
+.story01{
+    z-index: -10;
+    height: 800px;
+    width: 100%;
+    background: url('img/bg.gif')  no-repeat center center fixed;
+    background-size: cover; 
+}
+
+#img{
+    z-index: 111;
+    float: left;
+    position: absolute;
+    margin-top: 20px;
+ 
+}
+
+
+
+@media ( max-width:600px) {
+
+  
+}
+
+
+#story_01{
+    z-index: 111;
+    clear: both;
+    float: right;
+    color:#fff;
+    font-family: 'Nanum Gothic', sans-serif;
+position: absolute;
+    margin-top: 250px;
+    margin-left:400px;
+    display: inline-block;
+    line-height: 150%;
+}
+
+
+#sc{
+    font-size: 20pt;
+    z-index: 111;
+    clear: both;
+    float: right;
+    color:#fff;
+    font-family: 'Nanum Gothic', sans-serif;
+position: absolute;
+    margin-top:100px;
+    margin-left:400px;
+    display: inline-block;
+    line-height: 150%;
+
+}
+
+
+
+#box{   
+        background-color: rgba(39, 62, 73,0.5);
+    height: 500px;
+    width: 1200px;
+    margin-top:-5px;
+  position: absolute;
+    margin-left: auto;
+}
+.title{
+    font-size: 15pt;
+    font-weight: bold;
+    color: #811113;
+} 
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:800px;margin:0 auto;margin-top:80px; display: inline-block}
+    .tab-menu ul{display:flex;margin: auto; width: 500px}
+    .tab-menu li{flex:1;height:20px; width: 500px}
+    .tab-menu li a{position:relative;display:block;height:4px;background-color:red;text-transform:uppercase;text-align:center;color:#fff;line-height:30px;}
+    .tab-menu li a.selected{background-color:#000;cursor:default; height:5px;}
+    .tab-container{width:85%;margin:0 auto; box-sizing:border-box}
+    .tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
+    .tab-container .tab-content.selected{display:block} 
         </style>
     </head>
     <body>
-        <header class="c12">
-            <h1>루바토의 사진 아카데미</h1>
-        </header>
-        <aside id="menu" class="c_m_3 c_3">
-            <ul>
-                <li>사진의 역사</li>
-                <li>노출이란?</li>
-                <li>카메라 동작 모드</li>
-                <li>렌즈의 종류</li>
-            </ul>
-        </aside>
+    
+ <header id="top_menu">
 
-        <section id="main" class="c_m_9 c_6">
-            <h1>사진의 역사</h1>
-            <p> 사진이 발명되기 이전에도 사람들은 카메라 옵스큐라라는 장치로 피사체의 이미지를 얻는 방법을 알고 있었다.
-                13세기나 14세기 무렵에 발명된 카메라 옵스큐라는 한쪽 면에 구멍이 뚫린 암실 박스로, 암실 박스의 구멍으로 빛이 들어와 박스 안의
-                반대쪽 벽면에 이미지가 형성된다. </p>
-                <p>
-                    아날로그 카메라는 카메라 옵스큐라의 작동 원리를 그대로 따른 것이다. 차이점은 카메라의 경우 암실에 맺힌 상을 뒤집기 위해 거울을 사용하고,
-                    필름 이용하여 이미지를 저장한다는 것 이다.
-                </p>
-                <p>
-                    그 후 카메라 옵스큐라는 발전을 거듭하여 오늘날의 카메라에 이르게 되었다. 이게 예술의 한 장르로 인정받는 사진은 우리의 생활 곳곳에 스며들어 있다.
-            </p>
+
+<span class="open" onclick="openNavbar()">&#9776; </span>
+    <div id="navbar" class="overlay">
+      <a href="javascript:void(0);" onclick="closeNavbar()" class="close">&#9932;</a>
+      <div class="overlay-content">
+        <a href="index.html">movie</a>
+        <a href="second.html">D-0</a>
+        <a href="#">D+0</a>
+    
+      </div>
+    </div>
+    
+    <img id="logo" src="img/logo.png" width="70px">
+    </header>
+     <article>
+
+            <div class="accordion">
+              <ul>
+                <li tabindex="1">
+                  <div>
+                    <a href="#">
+                      <h2>"혁신적인 또라이다"</h2>
+                      <p>현수는 교도소에 들어오자마자 짝짝이 사건으로 재호의 눈에 들게 된다</p>
+                    </a>
+                  </div>
+                </li>
+                <li tabindex="2">
+                  <div>
+                    <a href="#">
+                      <h2>"엄마가 그랬어요 불쌍한 사람 보면 돕고 살라고"</h2>
+                      <p>현수의 도움으로 칼에 맞을 뻔한 재호가 도움을 받게 되고, 현수는 재호에게 신리를 얻게 된다</p>
+                    </a>
+                  </div>
+                </li>
+                <li tabindex="3">
+                  <div>
+                    <a href="#">
+                      <h2>"여기 있는 이 아저씨를 신고 하려고요"</h2>
+                      <p>재호는 교도소장을 협박하기 위해 현수와 교도소장을 찾아가게 된다. </p>
+                    </a>
+                  </div>
+                </li>
+
+                <li tabindex="4">
+                        <div>
+                          <a href="#">
+                                <h2>"한재호가 협박했어, 너 나가게 해달라고"</h2>
+                                <p>뺑소니 사고로 인해 현수의 어머니가 죽게 되고 재호의 도움으로 어머니의 장례를 진행 할수 있게 된다 </p>
+                          </a>
+                        </div>
+                      </li>
+                      <li tabindex="5">
+                            <div>
+                              <a href="#">
+                                <h2>"형, 나 경찰이야"</h2>
+                                <p>재호는 현수에게 나가서 같이 일을 하자고 하지만 현수는 재호에게 상상하지도 못했던 고백을 듣게된다</p>
+                              </a>
+                            </div>
+                          </li>
+                
+     </article>
+     <section class="story01 bg">
+
+            <div id="tab-menu" class="tab-menu">
+             
+                    <ul>
+                     
+                      <li><a href="#" class="selected" id="tab1">Scene01</a></li>
+                      <li><a href="#" id="tab2">Scene02</a></li>
+                      <li><a href="#" id="tab3">Scene03</a></li>
+                      <li><a href="#" id="tab4">Scene04</a></li>
+                      <li><a href="#" id="tab5">Scene05</a></li>
+                    </ul>
+                </div>
+                <div class="tab-container">
+                        
+                  <div class="tab-content selected">
+                  
+                              <img id="img" src="img/01.jpg" width="350px">
+                     <div id="sc"> 
+                        <div class="title">Scene01
+
+                        </div>
+                        <br>"혁신적인 또라이다"
+                        </div><br>
+                        <div id="story_01">   <div class="title">Story</div>
+                         <br> 현수는 감방안에 들어가자 마자 짝짝이 대회에 나가게 되는데. 키도, 덩치도 작고 예쁘게 생긴 현수를 본 재호는<br>
+                           당연히 현수가 질거라 생각했지만 현수는 빠르게 손바닥을 주먹으로 바꿔 <br>
+                           자신보다 몇배의 사람을 이기게 된다. 이 일을 계기로 현수는 재호의 눈에 들어가게 되고, <br>
+                          현수는 교소소안 화제의 인물이 된다
+                         </div>
+
+                         <div id="box"></div>
+
+                    </div>     
+
+                  <div class="tab-content"> 
+                        <img id="img" src="img/i_06.jpg" width="350px">
+                        <div id="sc"> 
+                           <div class="title">Scene01
+   
+                           </div>
+                           <br>"혁신적인 또라이다"
+                           </div><br>
+                           <div id="story_01">   <div class="title">Story</div>
+                            <br> 현수는 감방안에 들어가자 마자 짝짝이 대회에 나가게 되는데. 키도, 덩치도 작고 예쁘게 생긴 현수를 본 재호는<br>
+                              당연히 현수가 질거라 생각했지만 현수는 빠르게 손바닥을 주먹으로 바꿔 <br>
+                              자신보다 몇배의 사람을 이기게 된다. 이 일을 계기로 현수는 재호의 눈에 들어가게 되고, <br>
+                             현수는 교소소안 화제의 인물이 된다
+                            </div>
+   
+                            <div id="box"></div>
+                    
+                  </div>
+                  <div class="tab-content">
+                        <img id="img" src="img/i_04.jpg" width="350px">
+                     <div id="sc"> 
+                        <div class="title">Scene01
+
+                        </div>
+                        <br>"혁신적인 또라이다"
+                        </div><br>
+                        <div id="story_01">   <div class="title">Story</div>
+                         <br> 현수는 감방안에 들어가자 마자 짝짝이 대회에 나가게 되는데. 키도, 덩치도 작고 예쁘게 생긴 현수를 본 재호는<br>
+                           당연히 현수가 질거라 생각했지만 현수는 빠르게 손바닥을 주먹으로 바꿔 <br>
+                           자신보다 몇배의 사람을 이기게 된다. 이 일을 계기로 현수는 재호의 눈에 들어가게 되고, <br>
+                          현수는 교소소안 화제의 인물이 된다
+                         </div>
+
+                         <div id="box"></div>
+                  </div>
+                  <div class="tab-content">
+                        <img id="img" src="img/02.jpg" width="350px">
+                        <div id="sc"> 
+                           <div class="title">Scene01
+   
+                           </div>
+                           <br>"혁신적인 또라이다"
+                           </div><br>
+                           <div id="story_01">   <div class="title">Story</div>
+                            <br> 현수는 감방안에 들어가자 마자 짝짝이 대회에 나가게 되는데. 키도, 덩치도 작고 예쁘게 생긴 현수를 본 재호는<br>
+                              당연히 현수가 질거라 생각했지만 현수는 빠르게 손바닥을 주먹으로 바꿔 <br>
+                              자신보다 몇배의 사람을 이기게 된다. 이 일을 계기로 현수는 재호의 눈에 들어가게 되고, <br>
+                             현수는 교소소안 화제의 인물이 된다
+                            </div>
+   
+                            <div id="box"></div>
+
+                  </div>
+
+                  <div class="tab-content">                       
+                      
+                    <img id="img" src="img/i_02.jpg" width="350px">
+                    <div id="sc"> 
+                       <div class="title">Scene01
+
+                       </div>
+                       <br>"혁신적인 또라이다"
+                       </div><br>
+                       <div id="story_01">   <div class="title">Story</div>
+                        <br> 현수는 감방안에 들어가자 마자 짝짝이 대회에 나가게 되는데. 키도, 덩치도 작고 예쁘게 생긴 현수를 본 재호는<br>
+                          당연히 현수가 질거라 생각했지만 현수는 빠르게 손바닥을 주먹으로 바꿔 <br>
+                          자신보다 몇배의 사람을 이기게 된다. 이 일을 계기로 현수는 재호의 눈에 들어가게 되고, <br>
+                         현수는 교소소안 화제의 인물이 된다
+                        </div>
+
+                        <div id="box"></div></div>
+                </div>
+ 
         </section>
-
         
-        <footer class="c12">
-            COPYRIGHT(C) 루바토 ALL Rights Reseved.
-        </footer>
+          <footer>
+              아니 이거 왜 안 돼
+          </footer>
+          <script type="text/javascript">
+            var $tabMenu = document.querySelector("#tab-menu");
+            var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
+            var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
+
+            var $tab1 =document.querySelector("#tab1");
+            var $tab2 =document.querySelector("#tab2");
+            var $tab3 =document.querySelector("#tab3");
+            var $tab4 =document.querySelector("#tab4");
+            var $tab5 =document.querySelector("#tab5");
+
+
+            var $section = document.querySelector("section");
+
+
+
+
+
+$tab1.addEventListener("click", bg_1);
+function bg_1(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab2.addEventListener("click", bg_2);
+function bg_2(event) {
+    console.log( $section);
+    $section.style.background="url(img/04.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab3.addEventListener("click", bg_3);
+function bg_3(event) {
+    console.log( $section);
+    $section.style.background="url(img/03.gif)no-repeat center center fixed/cover";
+  
+}
+
+
+$tab4.addEventListener("click", bg_4);
+function bg_4(event) {
+    console.log( $section);
+    $section.style.background="url(img/05.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab5.addEventListener("click", bg_5);
+function bg_5(event) {
+    console.log( $section);
+    $section.style.background="url(img/06.gif)no-repeat center center fixed/cover";
+  
+}
+
+            console.log( $tab1);
+            // console.log($tabMenu, $tabMenuEl);
+            // console.log($tabContent);
+            for(var i = 0; i < $tabMenuEl.length; i++){
+              tabMenuClick(i);
+            }
+            function tabMenuClick(index){
+              //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
+              $tabMenuEl[index].addEventListener('click', function(e) {
+                e.preventDefault();
+                for(var i = 0; i < $tabMenuEl.length; i++){
+                  //모든 요소에서 .selected 를 삭제.
+                  $tabMenuEl[i].classList.remove('selected');
+                  $tabContent[i].classList.remove('selected');
+
+          
+                  if(i === index){
+                    //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
+                    //같은 경우에 .selected 를 요소에 추가.
+                    $tabMenuEl[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+
+
+               
+
+                  }
+                }
+                // for(var i = 0; i < $tabContent.length; i++){
+                //   $tabContent[i].classList.remove('selected');
+                //   if(i === index){
+                //     $tabContent[i].classList.add('selected');
+                //   }
+                // }
+              });
+            }
+
+
+            function openNavbar() {
+  document.querySelector("#navbar").style.width = "100%";
+  document.querySelectorAll(".open")[0].style.opacity = 0;
+}
+function closeNavbar() {
+  document.querySelector("#navbar").style.width = "0";
+  document.querySelectorAll(".open")[0].style.opacity = 1;
+}
+
+          </script>
+
 </html>

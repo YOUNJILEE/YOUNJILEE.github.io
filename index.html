@@ -16,12 +16,20 @@
 
 
  <header id="top_menu">
-     <img src="img/logo.png" width="70px">
-    <ul id="menu">
-        <li><a class="menu_1" href="#">D-0</a></li>
-        <li><a class="menu_1" href="#">D+0</a></li>
-        <li><a class="menu_1" href="#">movie</a></li>
-    </ul>
+
+
+    <span class="open" onclick="openNavbar()">&#9776; </span>
+<div id="navbar" class="overlay">
+  <a href="javascript:void(0);" onclick="closeNavbar()" class="close">&#9932;</a>
+  <div class="overlay-content">
+    <a href="#" id="btn1">movie</a>
+    <a href="second.html">D-0</a>
+    <a href="#">D+0</a>
+
+  </div>
+</div>
+
+<img id="logo" src="img/logo.png" width="70px">
 </header>
 <section>
     
@@ -38,28 +46,75 @@
     범죄조직의 1인자를 노리는 재호와 세상 무서운 것 없는 패기 넘치는 신참 현수는 교도소에서 만나 서로에게 끌리고 <br>
     끈끈한 의리를 다져간다.출소 후, 함께 권력을 차지하기 위해 의기투합하던 중, 서로에 대해 새로운 사실을 알게 되면서<br>
     그들의 관계는 흔들리기 시작하는데…<br></div>
-<div id="but_1" class="c_m_9 c_6">View more ></div>
+<div id="but_1" class="c_m_9 c_6" style="cursor:pointer">View more ></div>
 </div>
 </section>
 
 <section id="info">
-
-<div data-animate-in="up" id="movie_img"><img src="img/main.jpg" width="400spx"></div>
+    <div id="content">
+    <div id="div1"></div>
+ 
+<div data-animate-in="up" id="movie_img"><img src="img/main.jpg" width="380px"></div>
 <div id="title">색이 많은 영화 <br>불한당</div><div id="colorBox"></div>
 <div id="box_1"></div>
 <div data-animate-in="up" id="info_1">
+
 불한당은 2017년에 개봉이 되었다 개봉 당시에는 소위 말하는 손익분기점도 넘기지 못하는 망한영화가 되었다.<br>
 그렇게 이 영화가 끝이 나는가 싶었지만 불한당은 거기서 시작이었다. <br>
 불한당 마니아층 "불한당원"들의 자체적인 대관 만으로 스크린 점유율이 처음 0%를 기록했던 <br>
 2017년 7월 6일 보다 약 2만 5000명 높은 95만 7993명을 기록했다.<br>
  한국 영화 역사상 없던 기록이었고 기적 같은 일이었다. <br>
  최근 시행한 불한당 2주년 대관도 성공적으로 끝마치고  불한당은 지금부터 시작이다.</div>
-
-            
+ <div data-animate-in="up" id="video"><iframe  width="200" height="130" src="https://www.youtube.com/embed/pWpGlD4D7X0" 
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+</div>
 </section>
+
+
 
 </body>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script src="js/script.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script>
+
+	$(document).ready(function(){
+
+		$('#btn1').click(function(){
+
+			var offset = $('#div1').offset();
+          
+	        $('html').animate({scrollTop : offset.top}, 400);
+
+		});
+
+	});
+
+    $(document).ready(function(){
+
+$('#but_1').click(function(){
+
+    var offset = $('#div1').offset();
+  
+    $('html').animate({scrollTop : offset.top}, 400);
+
+});
+
+});
+
+function openNavbar() {
+  document.querySelector("#navbar").style.width = "100%";
+  document.querySelectorAll(".open")[0].style.opacity = 0;
+}
+function closeNavbar() {
+  document.querySelector("#navbar").style.width = "0";
+  document.querySelectorAll(".open")[0].style.opacity = 1;
+}
+
+
+</script>
+
+
 
 </html>
