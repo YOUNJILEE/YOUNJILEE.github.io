@@ -1,0 +1,692 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="section.css" media="all">
+        <style>
+*{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+        [class*="c_"] {
+            float:left;
+        
+        }
+        [class*="c_"] {
+            width:100%;
+        }
+        @media only screen and (min-width:600px) {
+            .c_m_1 {width:8.33%;}
+            .c_m_2 {width:16.66%;}
+            .c_m_3 {width:25%;}
+            .c_m_4 {width:33.33%;}
+            .c_m_5 {width:41.66%;}
+            .c_m_6 {width:50%;}
+            .c_m_7 {width:58.33%;}
+            .c_m_8 {width:66.66%;}
+            .c_m_9 {width:75%;}
+            .c_m_10 {width:83.33%;}
+            .c_m_11 {width:91.66%;}
+            .c_m_12 {width:100%;}
+        }
+
+        @media only screen and (min-width:768px) {
+            .c_1 {width:8.33%;}
+            .c_2 {width:16.66%;}
+            .c_3 {width:25%;}
+            .c_4 {width:33.33%;}
+            .c_5 {width:41.66%;}
+            .c_6 {width:50%;}
+            .c_7 {width:58.33%;}
+            .c_8 {width:66.66%;}
+            .c_9 {width:75%;}
+            .c_10 {width:83.33%;}
+            .c_11 {width:91.66%;}
+            .c_12 {width:100%;}
+        }
+
+      
+        footer {
+            height:60px;
+            padding:10px;
+            clear:both;
+            text-align:center;
+            background-color:#eeeeee;
+        }
+
+
+
+.accordion {
+
+  height: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.accordion ul {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin: 0;
+  padding: 0;
+}
+.accordion ul li {
+  display: table-cell;
+  vertical-align: bottom;
+  position: relative;
+  width: 16.666%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 500ms ease;
+}
+.accordion ul li div {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.accordion ul li div a {
+  display: block;
+  height: 1000px;
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  vertical-align: bottom;
+  padding: 200px 200px;
+line-height: 150%;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+
+  transition: all 200ms ease;
+}
+.accordion ul li div a * {
+  opacity: 0;
+  margin: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 5;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-transform: translateX(-20px);
+  transform: translateX(-20px);
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+.accordion ul li div a h2 {
+
+  text-overflow: clip;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+  top: 160px;
+}
+.accordion ul li div a p {
+  top: 160px;
+  font-size: 13.5px;
+}
+.accordion ul li:nth-child(1) {
+  background-image: url("img/main_01.jpg");
+}
+.accordion ul li:nth-child(2) {
+  background-image: url("img/main03.jpg");
+}
+.accordion ul li:nth-child(3) {
+  background-image: url("img/main02.jpg");
+}
+.accordion ul li:nth-child(4) {
+  background-image: url("img/main06.jpg");
+}
+
+.accordion ul li:nth-child(5) {
+  background-image: url("img/main07.jpg");
+}
+
+
+
+.accordion ul:hover li, .accordion ul:focus-within li {
+  width: 20%;
+}
+.accordion ul li:focus {
+  outline: none;
+}
+.accordion ul:hover li:hover,
+.accordion ul li:focus, .accordion ul:focus-within li:focus {
+  width: 100%;
+}
+.accordion ul:hover li:hover a,
+.accordion ul li:focus a, .accordion ul:focus-within li:focus a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a *,
+.accordion ul li:focus a *, .accordion ul:focus-within li:focus a * {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+.accordion ul:hover li {
+  width: 8% !important;
+}
+.accordion ul:hover li a * {
+  opacity: 0 !important;
+}
+.accordion ul:hover li:hover {
+  width: 60% !important;
+}
+.accordion ul:hover li:hover a {
+  background: rgba(0, 0, 0, 0.4);
+}
+.accordion ul:hover li:hover a * {
+  opacity: 1 !important;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    margin: 0;
+
+  }
+
+
+  .accordion {
+    height: auto;
+  }
+  .accordion ul li, .accordion ul li:hover, .accordion ul:hover li, .accordion ul:hover li:hover {
+    position: relative;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+.about {
+  text-align: center;
+
+  font-size: 12px;
+  color: #666;
+}
+
+ p{
+    padding-top:30px;}
+.about a {
+  color: blue;
+  text-decoration: none;
+}
+.about a:hover {
+  text-decoration: underline;
+}
+
+
+/* 이거는 메뉴 css */
+
+header{
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 9999999;
+}
+
+
+header img{
+    margin-left: 10px;
+}
+
+html,
+  body {
+    width: 100%;
+    height: 100%;
+    
+  }
+
+  #logo{
+
+float: right;
+margin-right: 20px;
+
+  }
+
+
+  .open,
+  .close {
+    display: inline-block;
+    padding: 0;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 2rem;
+
+    color: #fff;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  
+  .overlay {
+    position: fixed;
+    width: 0;
+    top: 0;
+    background-color: #333;
+    opacity: 0.7;
+    overflow-x: hidden;
+    height: 100%;
+    transition: 0.5s;
+  }
+  
+  .overlay-content {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    padding-top: 200px;
+    margin-top: 30px;
+  }
+  
+  .overlay-content a {
+    font-size: 2rem;
+    color: #fff;
+    display: block;
+    padding: 20px;
+    margin-bottom: 4px;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+  }
+  .overlay-content a:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #fff;
+    transition: 0.3s;
+    display: block;
+  }
+  .overlay-content a:hover {
+    color: #ff9f1a;
+  }
+  
+  .overlay-content a:hover:after {
+    width: 25%;
+  }
+  
+.story01{
+    z-index: -10;
+    height: 800px;
+    width: 100%;
+    background: url('img/bg02_1.gif')  no-repeat center center fixed;
+    background-size: cover; 
+}
+
+#img{
+    z-index: 111;
+    float: left;
+    position: absolute;
+    margin-top: 20px;
+ 
+}
+
+
+
+@media ( max-width:600px) {
+
+  
+}
+
+
+#story_01{
+    z-index: 111;
+    clear: both;
+    float: right;
+    color:#fff;
+    font-family: 'Nanum Gothic', sans-serif;
+position: absolute;
+    margin-top: 250px;
+    margin-left:400px;
+    display: inline-block;
+    line-height: 150%;
+}
+
+
+#sc{
+    font-size: 20pt;
+    z-index: 111;
+    clear: both;
+    float: right;
+    color:#fff;
+    font-family: 'Nanum Gothic', sans-serif;
+position: absolute;
+    margin-top:100px;
+    margin-left:400px;
+    display: inline-block;
+    line-height: 150%;
+
+}
+
+
+
+#box{   
+    background-color: rgba(39, 62, 73,0.5);
+    height: 500px;
+    width: 1200px;
+    margin-top:-5px;
+  position: absolute;
+    margin-left: auto;
+
+    border-top: 5px solid #811113;
+    border-bottom: 5px solid #811113
+}
+.title{
+    font-size: 15pt;
+    font-weight: bold;
+    color: #758490;
+    width: 500px
+} 
+
+#info_01{
+    line-height:180%;
+}
+
+
+    *{margin:0;padding:0}
+    body{font-family:'Roboto', sans-serif}
+    a{text-decoration:none}
+    ul{list-style-type:none}
+    .tab-menu{width:800px;margin:0 auto;margin-top:80px; display: inline-block}
+    .tab-menu ul{display:flex;margin: auto; width: 500px}
+    .tab-menu li{flex:1;height:20px; width: 500px}
+    .tab-menu li a{position:relative;display:block;height:4px;background-color:red;text-transform:uppercase;text-align:center;color:#fff;line-height:30px;}
+    .tab-menu li a.selected{background-color:#000;cursor:default; height:5px;}
+    .tab-container{width:85%;margin:0 auto; box-sizing:border-box}
+    .tab-container .tab-content{display:none;padding:30px;height:500px;box-sizing:border-box}
+    .tab-container .tab-content.selected{display:block} 
+        </style>
+    </head>
+    <body>
+    
+ <header id="top_menu">
+
+
+<span class="open" onclick="openNavbar()">&#9776; </span>
+    <div id="navbar" class="overlay">
+      <a href="javascript:void(0);" onclick="closeNavbar()" class="close">&#9932;</a>
+      <div class="overlay-content">
+        <a href="index.html">movie</a>
+        <a href="second.html">D-0</a>
+        <a href="03.html">D+0</a>
+        <a href="music.html">etc</a>
+    
+      </div>
+    </div>
+    
+    <img id="logo" src="img/logo.png" width="70px">
+    </header>
+     <article>
+
+            <div class="accordion">
+              <ul>
+                <li tabindex="1">
+                  <div>
+                    <a href="#">
+                      <h2>"차도 촌스러워 이건 진짜 최악이다."</h2>
+                      <p>현수가 출소하자 재호는 현수를 위해 빨간 스포츠카를 타고 교도소 앞으로 간다</p>
+                    </a>
+                  </div>
+                </li>
+                <li tabindex="2">
+                  <div>
+                    <a href="#">
+                      <h2>"여기는 통화의 자유가 있다"</h2>
+                      <p>현수는 처음으로 재호의 일을 같이 하게 된다 </p>
+                    </a>
+                  </div>
+                </li>
+                <li tabindex="3">
+                  <div>
+                    <a href="#">
+                      <h2>"근데 난 형 믿어요"</h2>
+                      <p>재호는 무작정 현수를 믿기에 겁이 난다. 하지만 이미 현수는 재호를 믿고 있었다.</p>
+                    </a>
+                  </div>
+                </li>
+
+                <li tabindex="4">
+                        <div>
+                          <a href="#">
+                                <h2>"그런일 없었으면 너가 내 옆에 없었겠지"</h2>
+                                <p> 재호와 현수는 이제 서로를 믿을 수 밖에 없는 상화이 된다. </p>
+                          </a>
+                        </div>
+                      </li>
+                      <li tabindex="5">
+                            <div>
+                              <a href="#">
+                                <h2>"근데 어쩌나 나는 시체하고 술 안 마시는데"</h2>
+                                <p>재호는 결국 최회장을 죽이고 1인자가 된다. 하지만 왜인지 점점 불안해지기 시작한다.</p>
+                              </a>
+                            </div>
+                          </li>
+                
+     </article>
+
+     <section class="story01 bg">
+
+            <div id="tab-menu" class="tab-menu">
+             
+                    <ul>
+                     
+                      <li><a href="#" class="selected" id="tab1">Scene01</a></li>
+                      <li><a href="#" id="tab2">Scene02</a></li>
+                      <li><a href="#" id="tab3">Scene03</a></li>
+                      <li><a href="#" id="tab4">Scene04</a></li>
+                      <li><a href="#" id="tab5">Scene05</a></li>
+                    </ul>
+                </div>
+                <div class="tab-container">
+                        
+                  <div class="tab-content selected">
+                  
+                              <img id="img" src="img/main_01.jpg" width="350px">
+                     <div id="sc"> 
+                        <div class="title">Scene01<br>
+                          
+
+                        </div><br>
+                        "차도 촌스러워 이건 진짜 최악이다."
+                        </div><br>
+                        <div id="story_01">   <div class="title">Story</div>
+                        <div id="info_01">
+                         <br> 현수는 출소를 하게 되고, 재호는 그런 현수를 위해 교소소까지 차를 몰고 가게된다.<br>
+                         빨간 스포츠카를 보고선 촌스럽다고 하지만 두부일거래 예상했던 봉지 속에는 햄버거가 들어 있었다. <br>현수와 재호는 그렇게 
+                         밖에서 같이 일을 하기로 하는데
+                        </div>
+                         </div>
+
+                         <div id="box"></div>
+
+                    </div>     
+
+                  <div class="tab-content"> 
+                        <img id="img" src="img/main03.jpg" width="350px">
+                        <div id="sc"> 
+                           <div class="title">Scene02
+   
+                            </div>
+                            <br>"여기는 통화의 자유가 있다"
+                            </div><br>
+                            <div id="story_01">   <div class="title">Story</div>
+                            <div id="info_01">
+                             <br>현수와 재호는 처음으로 같이 작업을 해보는데 현수는 다치긴 했지만 재호의 도움으로 <br>
+                             성공적으로 잡업을 마치게 된다. 그 결과 최회장에게 신뢰를 얻게 되고 <br>
+                             오세안 무역의 조직원으로 자리잡게 된다
+                            </div>
+                             </div>
+   
+                            <div id="box"></div>
+                    
+                  </div>
+                  <div class="tab-content">
+                        <img id="img" src="img/main02.jpg" width="350px">
+                     <div id="sc"> 
+                        <div class="title">Scene03
+
+                        </div>
+                        <br>"근데 난 형 믿어요"
+                        </div><br>
+                        <div id="story_01">   <div class="title">Story</div>
+                        <div id="info_01">
+                         <br>재호는 지금까지 사람을 믿고 살지 않던 사람이었다. 하지만 왜일까 <br>
+                         계속해서 현수는 다른 사람과 다른 기분이 들기만 했다. <br>
+                         혼란스러운 마음만이 가득했지만 그런 재호와는 다르게 현수는 무조건적으로 재호는 믿는다.
+                        </div>
+                         </div>
+
+                         <div id="box"></div>
+                  </div>
+                  <div class="tab-content">
+                        <img id="img" src="img/main06.jpg" width="350px">
+                        <div id="sc"> 
+                           <div class="title">Scene04
+   
+                           </div>
+                           <br>"그런일 없었으면 너가 내 옆에 없었겠지"
+                           </div><br>
+                           <div id="story_01">   <div class="title">Story</div>
+                           <div id="info_01">
+                            <br>재호는 결국 현수를 믿게 된다. 둘이 같이 밤바다를 구경 히가도 하고, 불꽃놀이도 하며 지낸다.<br>
+                                재호에게 현수는 소중한 존재가 되었다.</div>
+                            </div>
+                            
+                            <div id="box"></div>
+
+                  </div>
+
+                  <div class="tab-content">                       
+                      
+                    <img id="img" src="img/main07.jpg" width="350px">
+                    <div id="sc"> 
+                       <div class="title">Scene05       
+
+                       </div>
+                       <br>"근데 어쩌나 나는 시체하고 술 안 마시는데"
+                       </div><br>
+                       <div id="story_01">   <div class="title">Story</div>
+                       <div id="info_01">
+                        <br> 재호는 결국 오세안무역의 1인자가 된다. 하지만 재호는 무언가 계속 뷸안하기만 했다.<br>
+                    그러던 와중 현수는 어머니를 죽인 범인이 재호라는걸 알게 된다.</div>
+                        </div>
+
+                        <div id="box"></div></div>
+                </div>
+
+        </section>
+        
+         
+          <script type="text/javascript">
+            var $tabMenu = document.querySelector("#tab-menu");
+            var $tabMenuEl = $tabMenu.querySelectorAll('a'); //list. [... ... ... ...];
+            var $tabContent = document.getElementsByClassName('tab-content'); //list [... ... ... ...];
+
+            var $tab1 =document.querySelector("#tab1");
+            var $tab2 =document.querySelector("#tab2");
+            var $tab3 =document.querySelector("#tab3");
+            var $tab4 =document.querySelector("#tab4");
+            var $tab5 =document.querySelector("#tab5");
+
+
+            var $section = document.querySelector("section");
+
+
+
+
+
+$tab1.addEventListener("click", bg_1);
+function bg_1(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg02_1.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab2.addEventListener("click", bg_2);
+function bg_2(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg02_2.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab3.addEventListener("click", bg_3);
+function bg_3(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg02_3.gif)no-repeat center center fixed/cover";
+  
+}
+
+
+$tab4.addEventListener("click", bg_4);
+function bg_4(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg02_4.gif)no-repeat center center fixed/cover";
+  
+}
+
+$tab5.addEventListener("click", bg_5);
+function bg_5(event) {
+    console.log( $section);
+    $section.style.background="url(img/bg02_5.gif)no-repeat center center fixed/cover";
+  
+}
+
+            console.log( $tab1);
+            // console.log($tabMenu, $tabMenuEl);
+            // console.log($tabContent);
+            for(var i = 0; i < $tabMenuEl.length; i++){
+              tabMenuClick(i);
+            }
+            function tabMenuClick(index){
+              //i 의 순서를 체크할 수 있게 index 의 전달인자로 할당.
+              $tabMenuEl[index].addEventListener('click', function(e) {
+                e.preventDefault();
+                for(var i = 0; i < $tabMenuEl.length; i++){
+                  //모든 요소에서 .selected 를 삭제.
+                  $tabMenuEl[i].classList.remove('selected');
+                  $tabContent[i].classList.remove('selected');
+
+          
+                  if(i === index){
+                    //for 반복문이 실행될 때, 자신의 순서와 i 의 일치 여부를 체크.
+                    //같은 경우에 .selected 를 요소에 추가.
+                    $tabMenuEl[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+                    $tabContent[i].classList.add('selected');
+
+
+               
+
+                  }
+                }
+                // for(var i = 0; i < $tabContent.length; i++){
+                //   $tabContent[i].classList.remove('selected');
+                //   if(i === index){
+                //     $tabContent[i].classList.add('selected');
+                //   }
+                // }
+              });
+            }
+
+
+            function openNavbar() {
+  document.querySelector("#navbar").style.width = "100%";
+  document.querySelectorAll(".open")[0].style.opacity = 0;
+}
+function closeNavbar() {
+  document.querySelector("#navbar").style.width = "0";
+  document.querySelectorAll(".open")[0].style.opacity = 1;
+}
+
+          </script>
+
+</html>
