@@ -15,4 +15,6 @@
 다양한 이미지를 사용해서 이미지가 잘 보이고 이 페이지를 보며, 다시 한 번 영화의 감동을 느끼게 하고싶었다
 
 # 레퍼런스
-![Alt text](img/01.jpg)
+![Alt text](img/sam01.jpg)
+![Alt text](img/sma02.jpg)
+![Alt text](img/sam03.jpg)
